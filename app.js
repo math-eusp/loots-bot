@@ -11,7 +11,7 @@ setInterval (() => {
             request(tipjar, function (error, response, html) {
                 if (!error && response.statusCode == 200) {
                     const obj = JSON.parse(response.body);
-                    const topLoot = _.head(obj.data.monthly);
+                    const topLoot = _.head(obj.data[config.type]);
                     const stream = fs.createWriteStream("topLoot.txt");
                     stream.once('open', function(fd) {
                       stream.write(topLoot.handle_lc + ' - ' + topLoot.total + " Loots");
@@ -26,4 +26,4 @@ setInterval (() => {
             console.log(error)
         }
     })
-}, 10000);
+}, config.updateTime);
