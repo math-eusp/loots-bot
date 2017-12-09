@@ -1,0 +1,5 @@
+{
+    "lootUsername": "<YOUR_LOOTS_USER>",
+    "type": "<daily | weekly | monthly>",
+    "updateTime" : "<TIME_TO_UPDATE>",
+}
