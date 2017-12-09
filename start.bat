@@ -9,7 +9,7 @@ set Path=%NodePackagesPath%;%PATH%
 set NODE_PATH=%NodePackagesPath%\node_modules;%NODE_PATH%
 set NODE_ENV=production
 
-echo Environment variables are successfully added.
+echo Node successfully added.
 echo. 
 echo. 
 echo. 
