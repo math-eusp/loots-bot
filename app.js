@@ -16,16 +16,15 @@ setInterval (() => {
                             if(obj.data[config.type]){
                                 const topLoot = _.head(obj.data[config.type]);
                                 const stream = fs.createWriteStream("topLoot.txt");
-                                stream.once('open', function(fd) {
                                 var strWrite = topLoot.handle_lc;
-                                if(config.showLoots)
-                                    strWrite += ' - ' + topLoot.total + " Loots"
-                                stream.write(strWrite);
-                                stream.end();
+                                stream.once('open', function(fd) {
+                                    if(config.showLoots) strWrite += ' - ' + topLoot.total + " Loots";
+                                    stream.write(strWrite);
+                                    stream.end();
+                                    console.log('routine executed: ' + strWrite)
                                 });
-                                console.log('routine executed')
                             }else{
-                                console.log('type not found');
+                                console.log('type not found: ' + config.type);
                             }
                         }
                     }else{
@@ -33,7 +32,7 @@ setInterval (() => {
                     }
                 })
             }else{
-                console.log('user not found');
+                console.log('user not found: ' + config.lootsUser);
             }
         }else{
             console.log(error)
