@@ -17,7 +17,10 @@ setInterval (() => {
                                 const topLoot = _.head(obj.data[config.type]);
                                 const stream = fs.createWriteStream("topLoot.txt");
                                 stream.once('open', function(fd) {
-                                stream.write(topLoot.handle_lc + ' - ' + topLoot.total + " Loots");
+                                var strWrite = topLoot.handle_lc;
+                                if(config.showLoots)
+                                    strWrite += ' - ' + topLoot.total + " Loots"
+                                stream.write(strWrite);
                                 stream.end();
                                 });
                                 console.log('routine executed')
