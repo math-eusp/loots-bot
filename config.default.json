@@ -3,4 +3,5 @@
     "showLoots": "<true | false>",
     "type": "<daily | weekly | monthly>",
     "updateTime" : "<TIME_TO_UPDATE>",
+    "top" : "<QUANTITY_TOP_DONATORS>"
 }
