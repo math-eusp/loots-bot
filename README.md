@@ -8,7 +8,9 @@ Create a config.json file with the following lines
     "lootUsername": "<YOUR_LOOTS_USER>",
     "type": "<daily | weekly | monthly>",
     "updateTime" : "<TIME_TO_UPDATE>",
-    "top" : "<QUANTITY_TOP_DONATORS>"
+    "top" : "<QUANTITY_TOP_DONATORS>",
+    "path" : "<PATH_TO_A_FOLDER>",
+    "multiFiles" : "<TRUE/FALSE>"
 }
 ```
 
