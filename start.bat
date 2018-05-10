@@ -1,17 +1,9 @@
 @echo off
 echo.
-
-set NodePackagesPath=E:\Projects\OpenShift\Materials\Node.jsPackageManager // This is my path, you can edit them
-
-set Path=%NodePackagesPath%\node_modules\.bin;%PATH%
-set Path=%NodePackagesPath%;%PATH%
-
-set NODE_PATH=%NodePackagesPath%\node_modules;%NODE_PATH%
-set NODE_ENV=production
-
-echo Node successfully added.
-echo. 
-echo. 
-echo. 
-
-node app.js
+echo.
+echo.
+call npm install
+echo.
+echo.
+echo lootbot found
+call node app.js
